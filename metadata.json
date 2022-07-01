@@ -1,0 +1,11 @@
+{
+  "title": "Internal Test - Integrations Factory",
+  "package_name": "internal_test",
+  "version": "5.1.3",
+  "version_description": "IFC-SDK - For testing the CS sending performance",
+  "labels": ["internal_test", "integrations-factory"],
+  "collector_type": "continuous",
+  "package_description": "The Demo collector retrieves events information from blah, blah, blah",
+  "owner": "integrations_factory@devo.com",
+  "allow_validation": "0"
+}

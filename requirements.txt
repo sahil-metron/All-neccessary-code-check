@@ -1,0 +1,18 @@
+# Global requirements for all agents
+pip==22.0.4
+setuptools==60.9.3
+wheel==0.37.1
+
+Click==7.1.1
+requests==2.27.1
+ratelimiter==1.2.0.post0
+devo-sdk==3.5.0
+redis==4.1.4
+python-dateutil==2.8.2
+PyYAML==5.4.1
+pytz==2021.3
+syslog-py==0.2.5
+psutil==5.9.0
+
+# Used by collector modules
+Faker==5.0.1

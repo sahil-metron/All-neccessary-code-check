@@ -1,0 +1,14 @@
+version: v1.22.1
+language-settings:
+python: "3.9.10"
+
+exclude:
+  code:
+    - .scannerwork/*
+    - certs/*
+    - credentials/*
+    - reports/*
+    - state/*
+    - sonar-project.properties
+    - .idea/*
+    - .git

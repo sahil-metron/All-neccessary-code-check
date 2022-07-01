@@ -1,0 +1,39 @@
+globals:
+  debug: false
+  id: not_used
+  name: wiz_collector
+  persistence:
+    type: filesystem
+    config:
+      directory_name: state
+  multiprocessing: false
+  queue_max_size_in_mb: 1024
+  queue_max_size_in_messages: 1000
+  queue_max_elapsed_time_in_sec: 60
+  queue_wrap_max_size_in_messages: 100
+
+outputs:
+  devo_1:
+    type: devo_platform
+    config:
+      address: collector-us.devo.io
+      port: 443
+      type: SSL
+      chain: chain.crt
+      cert: al_sandbox.crt
+      key: al_sandbox.key
+
+inputs:
+  wiz_data_puller:
+    id: 111
+    enabled: true
+    requests_per_second: 5
+    override_api_base_url: <wiz base url>
+    historic_date_utc:
+    override_flatten_data: true
+    credentials:
+      client_id: <client_id>
+      client_secret: <client_secret>
+    services:
+      issues:
+        request_period_in_seconds: 600

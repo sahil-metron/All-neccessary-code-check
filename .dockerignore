@@ -1,0 +1,12 @@
+venv
+log
+state
+certs
+credentials
+config
+docs
+reports
+sonar-project.properties
+.idea
+.git
+.snyk

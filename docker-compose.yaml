@@ -1,0 +1,20 @@
+---
+version: '3'
+
+services:
+  collector-wiz:
+    image: devo.com/collectors/wiz:${IMAGE_VERSION:-latest}
+    container_name: collector-wiz
+    volumes:
+      - ./certs:/devo-collector/certs
+      - ./config:/devo-collector/config
+      - ./credentials:/devo-collector/credentials
+      - ./state:/devo-collector/state
+    environment:
+      - CONFIG_FILE=${CONFIG_FILE:-config.yaml}
+#networks:
+#  default:
+#    ipam:
+#      driver: default
+#      config:
+#        - subnet: 192.168.150.0/24
